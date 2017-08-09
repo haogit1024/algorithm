@@ -1,5 +1,8 @@
 package com.czh.listpractice;
 
+/**
+ * 练习1.3.30
+ */
 public class RingQueue<Item> {
     private Node last;
     private int N;

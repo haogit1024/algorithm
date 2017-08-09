@@ -90,7 +90,18 @@ public class FirstStack<Item> implements Iterable<Item> {
             index = index.next;
         }
         index.next = null;
+    }
 
+    public Node reverse(FirstStack stack) {
+        Node reverse = null;
+        Node index = stack.first;
+        while (index != null) {
+            Node second = index.next;
+            index.next = reverse;
+            reverse = index;
+            index = second;
+        }
+        return reverse;
     }
 
     @Override
