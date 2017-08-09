@@ -135,7 +135,43 @@ public class FirstQueue<Item> implements Iterable<Item> {
                 index = index.next;
             }
         }
+    }
 
+    /**
+     * 练习1.3.27
+     */
+    public int max(FirstQueue<Integer> queue) {
+        FirstQueue<Integer>.Node index = queue.first;
+        int max = index.item;
+        index = index.next;
+        while (index != null) {
+            if (index.item > max) {
+                max = index.item;
+            }
+            index = index.next;
+        }
+        return max;
+    }
+
+    /**
+     * 练习1.3.28
+     */
+    public int recursionMax(FirstQueue<Integer> queue) {
+        FirstQueue<Integer>.Node index = queue.first;
+        int max = index.item;
+        index = index.next;
+        return recursionMax(index, max);
+    }
+
+    public int recursionMax(FirstQueue<Integer>.Node index, int max) {
+        if (index == null) {
+            return max;
+        }
+        if (index.item > max) {
+            max = index.item;
+        }
+        index = index.next;
+        return recursionMax(index, max);
     }
 
     @Override
@@ -159,23 +195,30 @@ public class FirstQueue<Item> implements Iterable<Item> {
     }
 
     public static void main(String[] args) {
-        FirstQueue<String> f = new FirstQueue<>();
-        f.enQueue("1");
-        f.enQueue("2");
-        f.enQueue("3");
-        f.enQueue("3");
-        f.enQueue("3");
-        f.enQueue("4");
-        f.enQueue("5");
-        f.enQueue("6");
-        f.enQueue("7");
-        for (String s : f) {
-            System.out.println(s);
-        }
-        System.out.println("--------------");
-        f.remove(f,"3");
-        for (String s : f) {
-            System.out.println(s);
-        }
+//        FirstQueue<String> f = new FirstQueue<>();
+//        f.enQueue("1");
+//        f.enQueue("2");
+//        f.enQueue("3");
+//        f.enQueue("3");
+//        f.enQueue("3");
+//        f.enQueue("4");
+//        f.enQueue("5");
+//        f.enQueue("6");
+//        f.enQueue("7");
+//        for (String s : f) {
+//            System.out.println(s);
+//        }
+//        System.out.println("--------------");
+        FirstQueue<Integer> fi = new FirstQueue<>();
+        fi.enQueue(1);
+        fi.enQueue(2);
+        fi.enQueue(3);
+//        fi.enQueue(9);
+        fi.enQueue(5);
+        fi.enQueue(6);
+        fi.enQueue(7);
+        fi.enQueue(8);
+        System.out.println(fi.recursionMax(fi));
+
     }
 }
