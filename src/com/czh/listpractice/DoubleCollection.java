@@ -2,6 +2,9 @@ package com.czh.listpractice;
 
 import java.util.Iterator;
 
+/**
+ * 练习1.3.31
+ */
 public class DoubleCollection<Item> implements Iterable<Item> {
     private DoubleNode first;
     private DoubleNode last;
@@ -23,23 +26,34 @@ public class DoubleCollection<Item> implements Iterable<Item> {
         return N == 0;
     }
 
+    //注意同时更新oldFirst.pre和last.next,它们都指向first
     public int size() {
         return N;
     }
 
     public void add(Item item) {
+//        if (isEmpty()) {
+//            DoubleNode node = new DoubleNode(item, null , null);
+//            first = node;
+//            last = node;
+//        } else {
+//            DoubleNode node = new DoubleNode(item, last, first);
+//            first = node;
+//            last.next = first;
+//        }
+        DoubleNode oldFirst = first;
+        first = new DoubleNode(item, last, oldFirst);
         if (isEmpty()) {
-            DoubleNode node = new DoubleNode(item, null , null);
-            first = node;
-            last = node;
+            last = first;
         } else {
-            DoubleNode oldFirst = first;
-            DoubleNode node = new DoubleNode(item, first, last);
-            first.next = node;
-            first = node;
-            last.pre = node;
+            oldFirst.pre = first;
+            last.next = first;
         }
         N++;
+    }
+
+    public void display(){
+        System.out.println(first.item);
     }
 
     @Override
@@ -60,7 +74,6 @@ public class DoubleCollection<Item> implements Iterable<Item> {
             Item item = iNode.item;
             iNode = iNode.next;
             i++;
-            System.out.println("item = " + item);
             return item;
         }
     }
@@ -71,8 +84,10 @@ public class DoubleCollection<Item> implements Iterable<Item> {
         c.add("2");
         c.add("3");
         c.add("4");
+        c.N = 2 * c.N;
         for (String s : c) {
-            System.out.println(c);
+            System.out.println(s);
         }
+//        c.display();
     }
 }
