@@ -6,11 +6,16 @@ import java.util.Stack;
  * Created by czh on 17-8-7.
  */
 public class Test {
+    public Test(){
+        display();
+    }
+
+    public void display(){
+        System.out.println("aaaaa");
+    }
+
     public static void main(String[] args) {
-        Node a = new Node("fuck");
-        Node b = a;
-        a = new Node("fucking");
-        System.out.println(b.a);
+        Test t = new Test();
     }
     static class Node {
         String a;
