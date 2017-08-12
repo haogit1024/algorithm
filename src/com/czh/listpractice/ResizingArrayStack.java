@@ -26,10 +26,11 @@ public class ResizingArrayStack<Item>  {
     }
 
     public Item pop() {
+        Item item = a[--N];
+        a[N] = null;
         if (N <= a.length / 4) {
             resize(a.length / 2);
         }
-        Item item = a[--N];
         return item;
     }
 
