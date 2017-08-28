@@ -37,7 +37,7 @@ public class FirstExperiment {
         System.out.println("运行时间为:" + (endTime - startTiem) / 1000.00);
     }
 
-    public static int[]  netWork(String path) throws IOException {
+    private static int[]  netWork(String path) throws IOException {
         URL url = new URL(path);
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         connection.setRequestMethod("GET");
