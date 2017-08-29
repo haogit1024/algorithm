@@ -2,6 +2,7 @@ package com.czh.unionfind;
 
 /**
  * Created by czh on 17-8-27.
+ * 快速查找算法,缺点是每次union都要遍历一次数组
  */
 public class QuickFindUF {
     private int[] id;

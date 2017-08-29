@@ -2,6 +2,7 @@ package com.czh.unionfind;
 
 /**
  * Created by czh on 17-8-28.
+ * 快速合并算法,缺点是容易生成瘦长高的树,导致find访问数组次数太大
  */
 public class QuickUnionUF {
     private int[] id;
