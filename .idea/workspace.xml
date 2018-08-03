@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf63c5d8-33fc-422a-a0a7-68a1ae00283b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/algorithm.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/algorithm/com/czh/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/algorithm/com/czh/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/czh/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/czh/Test.java" afterDir="false" />
-    </list>
+    <list default="true" id="cf63c5d8-33fc-422a-a0a7-68a1ae00283b" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,21 +24,24 @@
         <counts>
           <entry key="project.closed" value="6" />
           <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.7" value="2" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="gitignore" value="1" />
           <entry key="java" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JAVA" value="10" />
+          <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -87,15 +85,24 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/czh/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" selection-start-line="7" selection-end-line="11" />
+            <state relative-caret-position="180">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
               <folding>
                 <element signature="e#123#124#0" expanded="true" />
                 <element signature="e#166#167#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -162,6 +169,7 @@
         <option value="$PROJECT_DIR$/src/com/czh/basis/ArrayBasisOperation.java" />
         <option value="$PROJECT_DIR$/src/com/czh/basis/BinarySearch.java" />
         <option value="$PROJECT_DIR$/src/com/czh/Test.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -188,8 +196,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -224,7 +231,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -581,17 +589,18 @@
       <workItem from="1533177986408" duration="1067000" />
       <workItem from="1533216494319" duration="4370000" />
       <workItem from="1533258870773" duration="3074000" />
+      <workItem from="1533297358338" duration="518000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88654000" />
+    <option name="totallyTimeSpent" value="89172000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19571045" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19839142" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.2497332" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -606,7 +615,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="9" />
       <window_info anchor="bottom" id="Version Control" order="10" />
@@ -768,13 +777,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/czh/unionfind/QuickFindUF.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -817,6 +819,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/src.zip!/java/util/DualPivotQuicksort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46818">
+          <caret line="2624" column="45" selection-start-line="2624" selection-start-column="43" selection-end-line="2624" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/src.zip!/java/lang/Double.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14832">
+          <caret line="881" column="30" selection-start-line="881" selection-start-column="30" selection-end-line="881" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/czh/list/FirstBag.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -851,28 +867,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/src.zip!/java/util/DualPivotQuicksort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46818">
-          <caret line="2624" column="45" selection-start-line="2624" selection-start-column="43" selection-end-line="2624" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/src.zip!/java/lang/Double.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14832">
-          <caret line="881" column="30" selection-start-line="881" selection-start-column="30" selection-end-line="881" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/czh/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" selection-start-line="7" selection-end-line="11" />
+        <state relative-caret-position="180">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
           <folding>
             <element signature="e#123#124#0" expanded="true" />
             <element signature="e#166#167#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
         </state>
       </provider>
     </entry>
