@@ -2,6 +2,10 @@ package com.czh.basis;
 
 import java.util.Arrays;
 
+/**
+ * @author czh
+ * 各种数组的操作方法
+ */
 public class ArrayBasisOperation {
     public static double getMax(double[] array) {
         double max = array[0];
@@ -37,6 +41,7 @@ public class ArrayBasisOperation {
     // 5.当数组是偶数个时, length/2为数组一半的个数, 即：length/2是左边边数组的长度, 比左边数组最大索引的大1,是右边数组的第一位元素的索引
     // 最后得出结论：当数组个数为奇数个时, length/2是数组正中间的元素的索引; 当数组的个数为偶数个时, length/2时右边数组的第一个元素的索引
     // 所以当i < length/2时, i可以遍历一个数组的前半段(当数组是奇数个是, 不包含正中间的元素)
+    // 数组倒叙
     public static void perversionArray(double[] array) {
         int length = array.length;
         for (int i = 0; i < length / 2; i++) {
