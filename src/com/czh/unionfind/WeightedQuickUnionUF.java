@@ -2,7 +2,7 @@ package com.czh.unionfind;
 
 /**
  * Created by czh on 17-8-29.
- * 解决QUickUnionUF容易生成高树的问题
+ * 解决QuickUnionUF容易生成高树的问题
  * 是我想复杂了,合并两颗树其实很简单
  */
 public class WeightedQuickUnionUF {

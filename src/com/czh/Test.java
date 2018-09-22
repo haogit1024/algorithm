@@ -1,6 +1,8 @@
 package com.czh;
 
 
+import com.czh.sort.SelectSort;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,16 +10,10 @@ public class Test {
     private static int minIndex = -1;
 
     public static void main(String[] args) {
-//        int[] nums = {1, 12, -5, -6, 50, 3};
-//        System.out.println(maxAverage(nums, 3));
-//        List<String> list = fizzBuzz(15);
-//        list.forEach(System.out::println);
-//        int[] nums = {3,4,5,8,8,8,8,10,13,14};
-//        System.out.println(binarySearch(nums, 8));
-        int index = 10;
-        int a = index;
-        index = 100;
-        System.out.println(a);
+        reverseInteger(123);
+        Integer[] a = new Integer[]{9,8,7,6,5,4,3,2,1};
+        SelectSort sort = new SelectSort();
+        sort.show(a);
     }
     public static int[] mergeSortedArray(int[] A, int[] B) {
         // write your code here
@@ -132,5 +128,18 @@ public class Test {
             }
             binarySearch(array, key,  left, mid - 1);
         }
+    }
+
+    public static int reverseInteger(int number) {
+        // write your code here
+        // 只需要交换百位和个位
+        int bai = number / 100;
+        int shi = number % 100 / 10;
+        int ge = number % 100 % 10;
+        System.out.println(bai);
+        System.out.println(shi);
+        System.out.println(ge);
+        System.out.println(number - bai * 100 + ge * 100 - ge + bai);
+        return 0;
     }
 }

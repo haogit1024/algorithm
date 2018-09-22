@@ -8,18 +8,19 @@ import java.net.URL;
 import java.util.Random;
 
 /**
- *  http://algs4.cs.princeton.edu/14analysis/1Kints.txt
- *  http://algs4.cs.princeton.edu/14analysis/2Kints.txt
- *  http://algs4.cs.princeton.edu/14analysis/4Kints.txt
- *  http://algs4.cs.princeton.edu/14analysis/8Kints.txt
+ *  https://algs4.cs.princeton.edu/14analysis/1Kints.txt
+ *  https://algs4.cs.princeton.edu/14analysis/2Kints.txt
+ *  https://algs4.cs.princeton.edu/14analysis/4Kints.txt
+ *  https://algs4.cs.princeton.edu/14analysis/8Kints.txt
  */
 public class FirstExperiment {
 
     public static void main(String[] args) throws IOException {
         Random r = new Random();
-        int[] arr = netWork("http://algs4.cs.princeton.edu/14analysis/8Kints.txt");
-        long startTiem = System.currentTimeMillis();
-        System.out.println("从网络获取随机数完毕,当前时间为:" + startTiem);
+        int[] arr = netWork("https://algs4.cs.princeton.edu/14analysis/4Kints.txt");
+        System.out.println("length:" + arr.length);
+        long startTime = System.currentTimeMillis();
+        System.out.println("从网络获取随机数完毕,当前时间为:" + startTime);
 
         int N = arr.length;
         int cnt = 0;
@@ -34,7 +35,7 @@ public class FirstExperiment {
         }
         long endTime = System.currentTimeMillis();
         System.out.println("运行结束,cnt = "+cnt+",当前时间为:" + endTime);
-        System.out.println("运行时间为:" + (endTime - startTiem) / 1000.00);
+        System.out.println("运行时间为:" + (endTime - startTime) / 1000.00 + "s");
     }
 
     private static int[]  netWork(String path) throws IOException {
