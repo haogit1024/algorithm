@@ -10,10 +10,21 @@ public class Test {
     private static int minIndex = -1;
 
     public static void main(String[] args) {
-        reverseInteger(123);
-        Integer[] a = new Integer[]{9,8,7,6,5,4,3,2,1};
-        SelectSort sort = new SelectSort();
-        sort.show(a);
+        int i = 1;
+        switch (i) {
+            case 1:
+                System.out.println('a');
+                break;
+            case 2:
+                System.out.println('b');
+                break;
+            default:
+                    System.out.println('c');
+        }
+//        reverseInteger(123);
+//        Integer[] a = new Integer[]{9,8,7,6,5,4,3,2,1};
+//        SelectSort sort = new SelectSort();
+//        sort.show(a);
     }
     public static int[] mergeSortedArray(int[] A, int[] B) {
         // write your code here
