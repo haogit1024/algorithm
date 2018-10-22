@@ -11,10 +11,9 @@ abstract class SortTemplate {
      * 比较大小
      * @param v
      * @param w
-     * @return 当 v > w 为 false, 当 v < w 为 true
+     * @return 当 v >= w 为 false, 当 v < w 为 true
      */
     protected boolean less(Comparable v, Comparable w) {
-//        System.out.println("v=" + v + ", w=" + w);
         return v.compareTo(w) < 0;
     }
 

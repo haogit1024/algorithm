@@ -2,7 +2,6 @@ package com.czh.sort;
 
 /**
  * 选择排序
- * TODO 补全复杂度
  */
 public class SelectSort extends SortTemplate {
     @Override
@@ -19,10 +18,11 @@ public class SelectSort extends SortTemplate {
     }
 
     public static void main(String[] args) {
-        Integer[] a = new Integer[]{10,9,8,7,6,5,4,3,2,1};
-        Integer[] a1 = new Integer[]{1,2,3,4,5,6,7,8,9};
+//        Integer[] a = new Integer[]{10,9,8,7,6,5,4,3,2,1};
+//        Integer[] a1 = new Integer[]{1,2,3,4,5,6,7,8,9};
         SelectSort sorter = new SelectSort();
-        sorter.sort(a);
-        sorter.show(a);
+//        sorter.sort(a);
+//        sorter.show(a);
+        System.out.println(sorter.less(1,2));
     }
 }

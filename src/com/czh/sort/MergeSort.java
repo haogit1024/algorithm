@@ -1,10 +1,6 @@
 package com.czh.sort;
 
-/**
- * 自定线下的归并排序
- * 需要 1/2NlgN至NlgN次比较
- * 和 6NlgN次数组访问
- */
+
 public class MergeSort extends SortTemplate {
     // 如果每次归并都创建一个新数组来存储排序结果会带来性能问题。因此我创建一个全局辅助数组
     private Comparable[] aux;
@@ -30,14 +26,22 @@ public class MergeSort extends SortTemplate {
         }
     }
 
+    /**
+     * 自定向下的归并排序
+     * 需要 1/2NlgN至NlgN次比较
+     * 和 6NlgN次数组访问
+     */
     // 递归执行
     private void sort(Comparable[] a, int lo, int hi) {
-        // 不能相等。相等时无法继续拆分子数组
+        // 不能相等。相等时无法继续拆分子数组。经过测试和分析, 应该不会出现lo > hi的情况。这里添加应该是起到判断错误输入的情况
+        if (lo > hi) {
+            System.out.println("merge lo=" + lo + ", hi=" + hi);
+        }
         if (lo >= hi) {
             return;
         }
         int mid = lo + (hi - lo) / 2;
-//        System.out.println("mid=" + mid);
+        // 只要保证递归过程中的第一个hi>=lo, 那么递归过程中的所有mid>=lo
         sort(a, lo, mid);
         sort(a, mid + 1, hi);
         merge(a, lo, mid, hi);

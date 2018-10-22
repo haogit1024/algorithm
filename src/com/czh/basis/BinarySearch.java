@@ -26,8 +26,25 @@ public class BinarySearch {
         }
     }
 
+    public static int rankByFor(int[] array, int key) {
+        int lo = 0;
+        int hi = array.length - 1;
+        while (lo <= hi) {
+            int mid = lo + (hi - lo) / 2;
+            if (array[mid] > key) {
+                hi = mid - 1;
+            } else if (array[mid] < key) {
+                lo = mid + 1;
+            } else {
+                return mid;
+            }
+        }
+        return -1;
+    }
+
     public static void main(String[] args) {
         int[] array = {1,2,3,4,5,6,7,8,9};
-        System.out.println(rank(2, array));
+        System.out.println(rank(7, array));
+        System.out.println(rankByFor(array, 7));
     }
 }

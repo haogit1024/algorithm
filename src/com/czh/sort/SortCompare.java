@@ -26,22 +26,22 @@ public class SortCompare {
                 MergeSort mergeSort = new MergeSort();
                 mergeSort.sort(array);
                 break;
+            case "quick":
+                QuickSort quickSort = new QuickSort();
+                quickSort.sort(array);
+                break;
+            case "quick3way":
+                Quick3way quick3way = new Quick3way();
+                quick3way.sort(array);
+                break;
             default:
-                    System.out.println("not such alg:" + alg);
+                System.out.println("not such alg:" + alg);
         }
-//        if (alg.equals("select")) {
-//            SelectSort selectSort = new SelectSort();
-//            selectSort.sort(array);
-//        } else if (alg.equals("insert")) {
-//            InsertSort insertSort = new InsertSort();
-//            insertSort.sort(array);
-//        } else if (alg.equals("shell")) {
-//            ShellSort shellSort = new ShellSort();
-//            shellSort.sort(array);
-//        } else {
-//            System.out.println("not such alg");
-//        }
         long endTime = System.currentTimeMillis();
+        // 计算完排序时间后, 检查数组是否有序
+        if (!isSort(array)) {
+            System.out.println(alg + ":不是有序的");
+        }
         return endTime - startTime;
     }
 
@@ -57,14 +57,38 @@ public class SortCompare {
         return total;
     }
 
+    public static boolean isSort(Comparable[] a) {
+        for (int i = 1; i < a.length; i++) {
+            if (less(a[i-1], a[i])) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /**
+     * 比较大小
+     * @param v
+     * @param w
+     * @return 当 v > w 为 false, 当 v <= w 为 true
+     */
+    protected static boolean less(Comparable v, Comparable w) {
+        //     compareTo：如果该对象小于、等于或大于指定对象，则分别返回负整数、零或正整数
+        return v.compareTo(w) >= 0;
+    }
+
     public static void main(String[] args) {
-        long selectRunTime = timeRandomInput("select", 2000, 20);
-        long insertRunTime = timeRandomInput("insert", 2000, 20);
-        long shellRunTime = timeRandomInput("shell", 2000, 20);
-        long mergeRunTime = timeRandomInput("merge", 2000, 20);
+        long selectRunTime = timeRandomInput("select", 6000, 20);
+        long insertRunTime = timeRandomInput("insert", 6000, 20);
+        long shellRunTime = timeRandomInput("shell", 6000, 20);
+        long mergeRunTime = timeRandomInput("merge", 6000, 20);
+        long quickRunTime = timeRandomInput("quick", 6000, 20);
+        long quick2wayRunTime = timeRandomInput("quick3way", 6000, 20);
         System.out.println(selectRunTime);
         System.out.println(insertRunTime);
         System.out.println(shellRunTime);
         System.out.println(mergeRunTime);
+        System.out.println(quickRunTime);
+        System.out.println(quick2wayRunTime);
     }
 }
