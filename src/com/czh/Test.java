@@ -1,6 +1,7 @@
 package com.czh;
 
 
+import com.czh.pq.ArrayMaxPQ;
 import com.czh.sort.SelectSort;
 
 import java.util.ArrayList;
@@ -10,16 +11,11 @@ public class Test {
     private static int minIndex = -1;
 
     public static void main(String[] args) {
-        int i = 1;
-        switch (i) {
-            case 1:
-                System.out.println('a');
-                break;
-            case 2:
-                System.out.println('b');
-                break;
-            default:
-                    System.out.println('c');
+        ArrayMaxPQ a = new ArrayMaxPQ();
+        for (int i = 0; i < 10; i++) {
+            if (i == 2)
+                System.out.println("if i:" + i);
+            System.out.println("i:" + i);
         }
 //        reverseInteger(123);
 //        Integer[] a = new Integer[]{9,8,7,6,5,4,3,2,1};
