@@ -22,6 +22,15 @@ public class Test {
 //        SelectSort sort = new SelectSort();
 //        sort.show(a);
     }
+
+    public static void testComparable() {
+        Integer i1 = 1;
+        Integer i2 = 2;
+        System.out.println(i1.compareTo(i2));
+        System.out.println(i2.compareTo(i2));
+        System.out.println(i2.compareTo(i1));
+    }
+
     public static int[] mergeSortedArray(int[] A, int[] B) {
         // write your code here
         int aLength = A.length;
