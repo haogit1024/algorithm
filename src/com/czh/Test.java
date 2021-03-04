@@ -11,16 +11,20 @@ public class Test {
     private static int minIndex = -1;
 
     public static void main(String[] args) {
-        ArrayMaxPQ a = new ArrayMaxPQ();
-        for (int i = 0; i < 10; i++) {
-            if (i == 2)
-                System.out.println("if i:" + i);
-            System.out.println("i:" + i);
-        }
+//        ArrayMaxPQ a = new ArrayMaxPQ();
+//        for (int i = 0; i < 10; i++) {
+//            if (i == 2)
+//                System.out.println("if i:" + i);
+//            System.out.println("i:" + i);
+//        }
 //        reverseInteger(123);
 //        Integer[] a = new Integer[]{9,8,7,6,5,4,3,2,1};
 //        SelectSort sort = new SelectSort();
 //        sort.show(a);
+//        System.out.println(myAtoi("0000-42"));
+        System.out.println(myAtoi("  0000000000012345678"));
+        // 2147483647
+        // -2147483648
     }
 
     public static void testComparable() {
@@ -157,5 +161,127 @@ public class Test {
         System.out.println(ge);
         System.out.println(number - bai * 100 + ge * 100 - ge + bai);
         return 0;
+    }
+
+    /**
+     * 请你来实现一个 myAtoi(string s) 函数，使其能将字符串转换成一个 32 位有符号整数（类似 C/C++ 中的 atoi 函数）。
+     *
+     * 函数 myAtoi(string s) 的算法如下：
+     *
+     * 读入字符串并丢弃无用的前导空格
+     * 检查下一个字符（假设还未到字符末尾）为正还是负号，读取该字符（如果有）。 确定最终结果是负数还是正数。 如果两者都不存在，则假定结果为正。
+     * 读入下一个字符，直到到达下一个非数字字符或到达输入的结尾。字符串的其余部分将被忽略。
+     * 将前面步骤读入的这些数字转换为整数（即，"123" -> 123， "0032" -> 32）。如果没有读入数字，则整数为 0 。必要时更改符号（从步骤 2 开始）。
+     * 如果整数数超过 32 位有符号整数范围 [−231,  231 − 1] ，需要截断这个整数，使其保持在这个范围内。具体来说，小于 −231 的整数应该被固定为 −231 ，大于 231 − 1 的整数应该被固定为 231 − 1 。
+     * 返回整数作为最终结果。
+     * 注意：
+     *
+     * 本题中的空白字符只包括空格字符 ' ' 。
+     * 除前导空格或数字后的其余字符串外，请勿忽略 任何其他字符。
+     *
+     * @param s
+     * @return
+     */
+    public static int myAtoi(String s) {
+        char[] num = new char[s.length() + 1];
+        int numIndex = 1;
+        num[0] = 'a';
+        for (char item : s.toCharArray()) {
+            if (!Character.isSpaceChar(item)) {
+                System.out.println((int)item);
+                // 排除空格
+                if (num[0] == 'a' && numIndex == 1 && (item == '-' || item == '+')) {
+                    num[0] = item;
+                } else if ((int) item >= 48 && (int) item <= 57) {
+                    num[numIndex] = item;
+                    numIndex++;
+                } else {
+                    break;
+                }
+            }
+        }
+        if (numIndex == 1) {
+            return 0;
+        }
+        if (num[0] == 'a') {
+            num[0] = '+';
+        }
+        // 截断数组
+        char[] finalNum = new char[numIndex];
+        if (numIndex >= 0) System.arraycopy(num, 0, finalNum, 0, numIndex);
+        int max = Integer.MAX_VALUE;
+        int min = Integer.MIN_VALUE;
+        String numStr = new String(finalNum);
+        if (isGeMax(numStr)) {
+            return max;
+        }
+        if (isLeMin(numStr)) {
+            return min;
+        }
+        return Integer.parseInt(numStr);
+    }
+
+    /**
+     * 比较s1和s2的大小，相同返回0 s1 > s2 返回1 s1 < s2 返回-1
+     * @param s1
+     * @param s2
+     * @return
+     */
+    public static int compare(String s1, String s2) {
+        int s1Index = 0;
+        int s2Index = 0;
+        return 1;
+    }
+
+    private static boolean isGeMax(String str) {
+        char label = str.charAt(0);
+        int index = 0;
+        if (label == '-') {
+            return false;
+        } else if (label == '+') {
+            index = 1;
+        }
+        String max = String.valueOf(Integer.MAX_VALUE);
+        int strLength = str.length() - index;
+        int maxLength = max.length();
+        if (strLength > maxLength) {
+            return true;
+        } else if (strLength < maxLength) {
+            return false;
+        } else {
+            // 长度相同
+            for (int i = 0; i < strLength; i++) {
+                if (str.charAt(i + index) > max.charAt(i)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public static boolean isLeMin(String str) {
+        char label = str.charAt(0);
+        int index = 0;
+        if (label != '-') {
+            return false;
+        } else {
+            index = 1;
+        }
+        String min = String.valueOf(Integer.MIN_VALUE);
+        int strLength = str.length() - index;
+        int minLength = min.length() - 1;
+        if (strLength > minLength) {
+            return true;
+        } else if (str.length() < minLength) {
+            return false;
+        } else {
+            // 长度相等
+            for (int i = 0; i < strLength; i++) {
+                if (str.charAt(i + index) > min.charAt(i + 1)) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 }
