@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf63c5d8-33fc-422a-a0a7-68a1ae00283b" name="Default" comment="">
+    <list default="true" id="cf63c5d8-33fc-422a-a0a7-68a1ae00283b" name="Default" comment="myAtoi（未完成）">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/algorithm/com/czh/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/algorithm/com/czh/Test.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/czh/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/czh/Test.java" afterDir="false" />
@@ -420,12 +420,24 @@
       <workItem from="1540199303422" duration="704000" />
       <workItem from="1585733737558" duration="690000" />
       <workItem from="1589510135001" duration="1889000" />
-      <workItem from="1614845347761" duration="7219000" />
+      <workItem from="1614845347761" duration="17171000" />
     </task>
+    <task id="LOCAL-00001" summary="myAtoi（未完成）">
+      <created>1614852738911</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1614852738911</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="myAtoi（未完成）" />
+    <option name="LAST_COMMIT_MESSAGE" value="myAtoi（未完成）" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

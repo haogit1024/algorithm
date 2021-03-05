@@ -11,20 +11,28 @@ public class Test {
     private static int minIndex = -1;
 
     public static void main(String[] args) {
-//        ArrayMaxPQ a = new ArrayMaxPQ();
-//        for (int i = 0; i < 10; i++) {
-//            if (i == 2)
-//                System.out.println("if i:" + i);
-//            System.out.println("i:" + i);
-//        }
-//        reverseInteger(123);
-//        Integer[] a = new Integer[]{9,8,7,6,5,4,3,2,1};
-//        SelectSort sort = new SelectSort();
-//        sort.show(a);
-//        System.out.println(myAtoi("0000-42"));
-        System.out.println(myAtoi("  0000000000012345678"));
-        // 2147483647
-        // -2147483648
+        System.out.println(isPalindrome(12311321));
+        int[] array = new int[1];
+        maxAverage(array, 1);
+    }
+
+    /**
+     * 是否是回文数
+     * @param x
+     * @return
+     */
+    public static boolean isPalindrome(int x) {
+        String s = String.valueOf(x);
+        char[] array = s.toCharArray();
+        int length = array.length;
+        int leftIndex = 0;
+        int leftLast = length / 2;
+        for (int i = leftIndex, j = length - 1; i < leftLast; i++, j--) {
+            if (array[i] != array[j]) {
+                return false;
+            }
+        }
+        return true;
     }
 
     public static void testComparable() {
@@ -183,42 +191,47 @@ public class Test {
      * @return
      */
     public static int myAtoi(String s) {
-        char[] num = new char[s.length() + 1];
-        int numIndex = 1;
-        num[0] = 'a';
-        for (char item : s.toCharArray()) {
-            if (!Character.isSpaceChar(item)) {
-                System.out.println((int)item);
-                // 排除空格
-                if (num[0] == 'a' && numIndex == 1 && (item == '-' || item == '+')) {
-                    num[0] = item;
-                } else if ((int) item >= 48 && (int) item <= 57) {
-                    num[numIndex] = item;
-                    numIndex++;
-                } else {
-                    break;
-                }
-            }
-        }
-        if (numIndex == 1) {
+        int length = s.length();
+        if (length == 0) {
             return 0;
         }
-        if (num[0] == 'a') {
-            num[0] = '+';
+        char[] array = s.toCharArray();
+        int index = 0;
+        // 读入字符串并丢弃无用的前导空格
+        while (index < length && array[index] == ' ') {
+            index++;
         }
-        // 截断数组
-        char[] finalNum = new char[numIndex];
-        if (numIndex >= 0) System.arraycopy(num, 0, finalNum, 0, numIndex);
-        int max = Integer.MAX_VALUE;
-        int min = Integer.MIN_VALUE;
-        String numStr = new String(finalNum);
-        if (isGeMax(numStr)) {
-            return max;
+        // 去掉空格后已经没有字符了
+        if (index == length) {
+            return 0;
         }
-        if (isLeMin(numStr)) {
-            return min;
+        // 检查下一个字符（假设还未到字符末尾）为正还是负号，读取该字符（如果有）。
+        // 确定最终结果是负数还是正数。 如果两者都不存在，则假定结果为正。
+        boolean label = true;
+        if (array[index] == '+') {
+            index++;
+        } else if (array[index] == '-') {
+            label = false;
+            index++;
         }
-        return Integer.parseInt(numStr);
+        int ans = 0;
+        for (int i = index; i < array.length; i++) {
+            char item = array[i];
+            if ((int) item >= 48 && (int) item <= 57) {
+                // 如果是数字 ascii 0=48 1=49.... 1-0=1
+                int itemNum = item - '0';
+                // 判断是否越界
+                if ((Integer.MAX_VALUE - itemNum) / 10 < ans) {
+                    // 2147483647 -2147483648
+                    // 如果数字部分大于 2147483647 也就是说 >= 2147483648
+                    return label ? Integer.MAX_VALUE : Integer.MIN_VALUE;
+                }
+                ans = ans * 10 + itemNum;
+            } else {
+                break;
+            }
+        }
+        return label ? ans : -ans;
     }
 
     /**
