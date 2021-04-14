@@ -1,9 +1,6 @@
 package com.czh.list;
 
-import jdk.nashorn.internal.ir.IndexNode;
-
 import java.util.Iterator;
-import java.util.Queue;
 
 /**
  * Created by czh on 17-8-6.
