@@ -29,6 +29,10 @@ abstract class SortTemplate {
         a[j] = temp;
     }
 
+    /**
+     * 打印
+     * @param a
+     */
     public void show(Comparable[] a) {
         for (int i = 0; i < a.length; i++) {
             System.out.print(a[i] + "\t");
@@ -38,6 +42,11 @@ abstract class SortTemplate {
         }
     }
 
+    /**
+     * 验证是否已经有序
+     * @param a
+     * @return
+     */
     public boolean isSort(Comparable[] a) {
         for (int i = 1; i < a.length; i++) {
             if (less(a[i], a[i-1]))

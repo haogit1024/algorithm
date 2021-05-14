@@ -4,7 +4,7 @@
     <list default="true" id="cf63c5d8-33fc-422a-a0a7-68a1ae00283b" name="Default" comment="myAtoi（未完成）">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/algorithm/com/czh/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/algorithm/com/czh/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/czh/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/czh/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/czh/sort/SortTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/czh/sort/SortTemplate.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +17,7 @@
         <option value="package-info" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -60,6 +61,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540199271628" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -75,14 +79,20 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.czh.second" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\gitclone\github\haogit1024\algorithm\lib" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.czh.search" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.czh.second" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.Test">
+  <component name="RunManager" selected="Application.SequentialSearchST">
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
       <module name="" />
       <option name="TESTING_TYPE" value="0" />
@@ -185,8 +195,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MergeSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.czh.sort.MergeSort" />
+    <configuration name="Quick3way" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.czh.sort.Quick3way" />
       <module name="algorithm" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -199,13 +209,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Quick3way" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.czh.sort.Quick3way" />
+    <configuration name="SequentialSearchST" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.czh.search.SequentialSearchST" />
       <module name="algorithm" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.czh.sort.*" />
+          <option name="PATTERN" value="com.czh.search.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -321,18 +331,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.SortCompare" />
-      <item itemvalue="Application.MergeSort" />
       <item itemvalue="Application.Quick3way" />
       <item itemvalue="Application.BinarySearch" />
       <item itemvalue="Application.Test" />
+      <item itemvalue="Application.SequentialSearchST" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SequentialSearchST" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Application.BinarySearch" />
         <item itemvalue="Application.SortCompare" />
         <item itemvalue="Application.Quick3way" />
-        <item itemvalue="Application.MergeSort" />
       </list>
     </recent_temporary>
   </component>
@@ -422,6 +432,7 @@
       <workItem from="1585733737558" duration="690000" />
       <workItem from="1589510135001" duration="1889000" />
       <workItem from="1614845347761" duration="17171000" />
+      <workItem from="1620962990928" duration="4174000" />
     </task>
     <task id="LOCAL-00001" summary="myAtoi（未完成）">
       <created>1614852738911</created>
