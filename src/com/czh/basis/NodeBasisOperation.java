@@ -20,14 +20,26 @@ public class NodeBasisOperation<T> {
      * 先将first保存再oldFirst中, 然后创建一个新结点, 将val设置成新的value, next指向oldFirst
      */
     public void addFirst(T val) {
-
+        if (first == null && last == null) {
+            Node temp = new Node();
+            temp.val = val;
+            first = temp;
+            last = temp;
+        }
+        Node oldFirst = first;
+        first = new Node();
+        first.val = val;
+        first.next = oldFirst;
     }
 
     /**
      * 先将last保存在oldLast中, 然后创建一个新结点, 将val设置成新的value, 并将last指向新结点和oldLast的next只指向last
      */
     public void addLast(T val) {
-
+        Node oldLast = last;
+        last = new Node();
+        last.val = val;
+        oldLast.next = last;
     }
 
     /**
@@ -36,7 +48,9 @@ public class NodeBasisOperation<T> {
      * 所以这个结点会被jvm回收
      */
     public T removeFirst() {
-        return null;
+        T res = first.val;
+        first = first.next;
+        return res;
     }
 
     /**
@@ -44,11 +58,23 @@ public class NodeBasisOperation<T> {
      * 因此便利链表找到next==last的结点, 将last指向该结点, 把该结点的next指向null. 这时原来的尾结点成为孤儿对象会被jvm回收
      */
     public T removeLast() {
-        return null;
+        T res = last.val;
+        for (Node temp = first; temp != null; temp = temp.next) {
+            if (temp.next == last) {
+                temp.next = null;
+            }
+        }
+        return res;
     }
 
     public void insertVal(T val, int index) {
+        int i = 0;
+        for (Node temp = first; temp != null; temp = temp.next) {
+            if (i == index) {
 
+            }
+            i++;
+        }
     }
 
     /**
