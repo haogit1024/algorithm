@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf63c5d8-33fc-422a-a0a7-68a1ae00283b" name="Default" comment="sort st">
+    <list default="true" id="cf63c5d8-33fc-422a-a0a7-68a1ae00283b" name="Default" comment="BinarySearchST">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/czh/basis/NodeBasisOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/czh/basis/NodeBasisOperation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/czh/search/SequentialSearchST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/czh/search/SequentialSearchST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/czh/list/FirstQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/czh/list/FirstQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/czh/search/BinarySearchST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/czh/search/BinarySearchST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/czh/search/api/SortST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/czh/search/api/SortST.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,10 +15,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="package-info" />
         <option value="Interface" />
         <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="package-info" />
       </list>
     </option>
   </component>
@@ -93,7 +94,7 @@
       <recent name="com.czh.second" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BinarySearchST">
+  <component name="RunManager" selected="Application.OrderedSequentialSearchST">
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
       <module name="" />
       <option name="TESTING_TYPE" value="0" />
@@ -202,7 +203,21 @@
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.czh.search.*" />
+          <option name="PATTERN" value="com.czh.search.exercises.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderedSequentialSearchST" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.czh.search.exercises.OrderedSequentialSearchST" />
+      <module name="algorithm" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.czh.search.exercises.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -216,21 +231,7 @@
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.czh.search.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SortCompare" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.czh.sort.SortCompare" />
-      <module name="algorithm" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.czh.sort.*" />
+          <option name="PATTERN" value="com.czh.search.exercises.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -331,19 +332,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.SortCompare" />
       <item itemvalue="Application.BinarySearch" />
       <item itemvalue="Application.Test" />
       <item itemvalue="Application.SequentialSearchST" />
       <item itemvalue="Application.BinarySearchST" />
+      <item itemvalue="Application.OrderedSequentialSearchST" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.OrderedSequentialSearchST" />
         <item itemvalue="Application.BinarySearchST" />
         <item itemvalue="Application.SequentialSearchST" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Application.BinarySearch" />
-        <item itemvalue="Application.SortCompare" />
       </list>
     </recent_temporary>
   </component>
@@ -434,7 +435,9 @@
       <workItem from="1589510135001" duration="1889000" />
       <workItem from="1614845347761" duration="17171000" />
       <workItem from="1620962990928" duration="4400000" />
-      <workItem from="1621220960301" duration="7405000" />
+      <workItem from="1621220960301" duration="8083000" />
+      <workItem from="1621256113765" duration="5120000" />
+      <workItem from="1621299074625" duration="3715000" />
     </task>
     <task id="LOCAL-00001" summary="myAtoi（未完成）">
       <created>1614852738911</created>
@@ -450,7 +453,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620972520364</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="BinarySearchST">
+      <created>1621233014662</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1621233014662</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -459,7 +469,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="myAtoi（未完成）" />
     <MESSAGE value="sort st" />
-    <option name="LAST_COMMIT_MESSAGE" value="sort st" />
+    <MESSAGE value="BinarySearchST" />
+    <option name="LAST_COMMIT_MESSAGE" value="BinarySearchST" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

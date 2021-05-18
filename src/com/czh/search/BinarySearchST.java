@@ -3,6 +3,8 @@ package com.czh.search;
 import com.czh.search.api.SortST;
 import edu.princeton.cs.algs4.Queue;
 
+import java.util.Arrays;
+
 
 /**
  * @author chenzh
@@ -89,6 +91,25 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> implements SortS
     }
 
     @Override
+    public void deleteMini() {
+        delete(mini());
+    }
+
+    @Override
+    public void deleteMax() {
+        delete(max());
+    }
+
+    @Override
+    public int size(Key lo, Key hi) {
+        int size = rank(hi) - rank(lo);
+        if (contains(hi)) {
+            size++;
+        }
+        return size;
+    }
+
+    @Override
     public Value get(Key key) {
         if (isEmpty()) {
             return null;
@@ -142,6 +163,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> implements SortS
         }
     }
 
+    @Override
     public Iterable<Key> keys(Key lo, Key hi) {
         Queue<Key> queue = new Queue<>();
         for (int i = rank(lo); i < rank(hi); i++) {
@@ -151,6 +173,11 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> implements SortS
             queue.enqueue(hi);
         }
         return queue;
+    }
+
+    @Override
+    public Iterable<Key> keys() {
+        return Arrays.asList(keys);
     }
 
     public void show() {
@@ -172,15 +199,20 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> implements SortS
         st.put(6, "g");
         st.put(7, "g");
         st.put(8, "h");
-        st.put(9, "i");
+//        st.put(9, "i");
         st.put(10, "j");
         st.put(11, "k");
 //        st.show();
 //        System.out.println(st.floor(8));
 //        System.out.println(st.ceiling(8));
-        st.delete(7);
-        st.delete(5);
+//        st.delete(7);
+//        st.delete(5);
 //        System.out.println(st.size);
-        st.show();
+//        st.deleteMini();
+//        st.deleteMax();
+//        st.show();
+//        System.out.println(st.size(7,10));
+        System.out.println(st.rank(7));
+        System.out.println(st.rank(10));
     }
 }

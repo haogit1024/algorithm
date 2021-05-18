@@ -42,4 +42,14 @@ public interface SortST<Key extends Comparable<Key>, Value> {
      * @return
      */
     Key select(int k);
+
+    void deleteMini();
+
+    void deleteMax();
+
+    int size(Key lo, Key hi);
+
+    Iterable<Key> keys(Key lo, Key hi);
+
+    Iterable<Key> keys();
 }

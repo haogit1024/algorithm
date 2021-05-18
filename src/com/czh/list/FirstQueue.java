@@ -35,12 +35,15 @@ public class FirstQueue<Item> implements Iterable<Item> {
     }
 
     public Item deQueue() {
+        if (isEmpty()) {
+            return null;
+        }
         Item result = first.item;
         first = first.next;
+        N--;
         if (isEmpty()) {
             last = null;
         }
-        N--;
         return result;
     }
 
