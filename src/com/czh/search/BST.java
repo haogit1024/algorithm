@@ -234,15 +234,21 @@ public class BST<Key extends Comparable<Key>, Value> implements SortST<Key, Valu
 
     @Override
     public boolean contains(Key key) {
-        return false;
+        return contains(root, key) != null;
+    }
+
+    private Node contains(Node x, Key key) {
+        if (x == null) return null;
+        int cmp = key.compareTo(x.key);
+        if (cmp < 0) return contains(x.left, key);
+        else if (cmp > 0) return contains(x.right, key);
+        else return x;
     }
 
     @Override
     public boolean isEmpty() {
         return root == null;
     }
-
-
 
     public static void main(String[] args) {
         System.out.println("hello");
@@ -254,9 +260,14 @@ public class BST<Key extends Comparable<Key>, Value> implements SortST<Key, Valu
         bst.put(5, "e");
         bst.print();
         System.out.println("-------------");
+        System.out.println(bst.contains(4));
+        System.out.println(bst.contains(3));
+        System.out.println(bst.contains(1));
+        System.out.println(bst.contains(6));
+        System.out.println(bst.contains(0));
 //        System.out.println(bst.max());
-        for (Integer key : bst.keys()) {
+        /*for (Integer key : bst.keys()) {
             System.out.println(key);
-        }
+        }*/
     }
 }
