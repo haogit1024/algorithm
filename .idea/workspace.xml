@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf63c5d8-33fc-422a-a0a7-68a1ae00283b" name="Default" comment="BinarySearchST">
+    <list default="true" id="cf63c5d8-33fc-422a-a0a7-68a1ae00283b" name="Default" comment="符号表习题3.1.3">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/czh/list/FirstQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/czh/list/FirstQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/algorithm/com/czh/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/algorithm/com/czh/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/czh/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/czh/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/czh/search/BinarySearchST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/czh/search/BinarySearchST.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/czh/search/api/SortST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/czh/search/api/SortST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/czh/search/exercises/OrderedSequentialSearchST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/czh/search/exercises/OrderedSequentialSearchST.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +20,8 @@
       <list>
         <option value="Interface" />
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="package-info" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -65,7 +68,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/com/czh/search" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -81,6 +84,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\gitclones\my\algorithm\data" />
       <recent name="C:\gitclones\my\algorithm\src\com\czh\search" />
       <recent name="C:\gitclone\github\haogit1024\algorithm\lib" />
     </key>
@@ -94,7 +98,7 @@
       <recent name="com.czh.second" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.OrderedSequentialSearchST">
+  <component name="RunManager" selected="Application.BST">
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
       <module name="" />
       <option name="TESTING_TYPE" value="0" />
@@ -183,13 +187,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BinarySearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.czh.basis.BinarySearch" />
+    <configuration name="BST" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.czh.search.BST" />
       <module name="algorithm" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.czh.basis.*" />
+          <option name="PATTERN" value="com.czh.search.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -211,13 +215,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderedSequentialSearchST" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.czh.search.exercises.OrderedSequentialSearchST" />
+    <configuration name="FirstExperiment" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.czh.second.FirstExperiment" />
       <module name="algorithm" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.czh.search.exercises.*" />
+          <option name="PATTERN" value="com.czh.second.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -225,8 +229,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SequentialSearchST" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.czh.search.SequentialSearchST" />
+    <configuration name="OrderedSequentialSearchST" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.czh.search.exercises.OrderedSequentialSearchST" />
       <module name="algorithm" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -332,19 +336,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.BinarySearch" />
       <item itemvalue="Application.Test" />
-      <item itemvalue="Application.SequentialSearchST" />
       <item itemvalue="Application.BinarySearchST" />
       <item itemvalue="Application.OrderedSequentialSearchST" />
+      <item itemvalue="Application.FirstExperiment" />
+      <item itemvalue="Application.BST" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BST" />
+        <item itemvalue="Application.FirstExperiment" />
+        <item itemvalue="Application.Test" />
         <item itemvalue="Application.OrderedSequentialSearchST" />
         <item itemvalue="Application.BinarySearchST" />
-        <item itemvalue="Application.SequentialSearchST" />
-        <item itemvalue="Application.Test" />
-        <item itemvalue="Application.BinarySearch" />
       </list>
     </recent_temporary>
   </component>
@@ -438,6 +442,14 @@
       <workItem from="1621220960301" duration="8083000" />
       <workItem from="1621256113765" duration="5120000" />
       <workItem from="1621299074625" duration="3715000" />
+      <workItem from="1621344684664" duration="136000" />
+      <workItem from="1621419729618" duration="1872000" />
+      <workItem from="1621487068333" duration="14000" />
+      <workItem from="1622007935427" duration="3324000" />
+      <workItem from="1622077908016" duration="589000" />
+      <workItem from="1622079505392" duration="267000" />
+      <workItem from="1623672770381" duration="2234000" />
+      <workItem from="1624929463408" duration="3231000" />
     </task>
     <task id="LOCAL-00001" summary="myAtoi（未完成）">
       <created>1614852738911</created>
@@ -460,7 +472,28 @@
       <option name="project" value="LOCAL" />
       <updated>1621233014662</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="符号表习题3.1.3">
+      <created>1621344744775</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1621344744775</updated>
+    </task>
+    <task id="LOCAL-00005" summary="符号表习题3.1.3">
+      <created>1621344776812</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1621344776812</updated>
+    </task>
+    <task id="LOCAL-00006" summary="符号表习题3.1.3">
+      <created>1621344810525</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1621344810525</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -470,7 +503,8 @@
     <MESSAGE value="myAtoi（未完成）" />
     <MESSAGE value="sort st" />
     <MESSAGE value="BinarySearchST" />
-    <option name="LAST_COMMIT_MESSAGE" value="BinarySearchST" />
+    <MESSAGE value="符号表习题3.1.3" />
+    <option name="LAST_COMMIT_MESSAGE" value="符号表习题3.1.3" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

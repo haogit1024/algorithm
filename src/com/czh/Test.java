@@ -11,9 +11,10 @@ public class Test {
     private static int minIndex = -1;
 
     public static void main(String[] args) {
-        System.out.println(isPalindrome(12311321));
-        int[] array = new int[1];
-        maxAverage(array, 1);
+//        System.out.println(isPalindrome(12311321));
+//        int[] array = new int[1];
+//        maxAverage(array, 1);
+        System.out.println(Test.class.getResource("./").getPath());
     }
 
     /**

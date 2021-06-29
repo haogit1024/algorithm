@@ -43,7 +43,7 @@ public interface SortST<Key extends Comparable<Key>, Value> {
      */
     Key select(int k);
 
-    void deleteMini();
+    void deleteMin();
 
     void deleteMax();
 

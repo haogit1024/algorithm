@@ -71,7 +71,7 @@ public class OrderedSequentialSearchST<Key extends Comparable<Key>, Value> imple
     @Override
     public void delete(Key key) {
         if (key.compareTo(first.key) == 0) {
-            deleteMini();
+            deleteMin();
             return;
         }
         if (key.compareTo(last.key) == 0) {
@@ -168,7 +168,7 @@ public class OrderedSequentialSearchST<Key extends Comparable<Key>, Value> imple
     }
 
     @Override
-    public void deleteMini() {
+    public void deleteMin() {
         if (isEmpty()) {
             return;
         }
