@@ -108,7 +108,7 @@ public class OrderedSequentialSearchST<Key extends Comparable<Key>, Value> imple
     }
 
     @Override
-    public Key mini() {
+    public Key min() {
         return first.key;
     }
 

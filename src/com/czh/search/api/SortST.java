@@ -12,7 +12,7 @@ public interface SortST<Key extends Comparable<Key>, Value> {
     boolean contains(Key key);
     boolean isEmpty();
     int size();
-    Key mini();
+    Key min();
     Key max();
 
     /**

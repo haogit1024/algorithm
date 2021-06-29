@@ -2,6 +2,7 @@ package com.czh.search;
 
 
 import com.czh.search.api.SortST;
+import edu.princeton.cs.algs4.Queue;
 
 /**
  * 二叉树
@@ -25,6 +26,25 @@ public class BST<Key extends Comparable<Key>, Value> implements SortST<Key, Valu
 
     public int size() {
         return size(root);
+    }
+
+    public Key min() {
+        return min(root).key;
+    }
+
+    private Node min(Node x) {
+        if (x.left == null) return x;
+        return min(x.left);
+    }
+
+    @Override
+    public Key max() {
+        return max(root);
+    }
+
+    public Key max(Node x) {
+        if (x.right == null) return x.key;
+        return max(x.right);
     }
 
     private int size(Node node) {
@@ -74,15 +94,6 @@ public class BST<Key extends Comparable<Key>, Value> implements SortST<Key, Valu
         return node;
     }
 
-    public Key min() {
-        return min(root).key;
-    }
-
-    private Node min(Node x) {
-        if (x.left == null) return x;
-        return min(x.left);
-    }
-
     public Key floor(Key key) {
         return floor(root, key).key;
     }
@@ -95,6 +106,11 @@ public class BST<Key extends Comparable<Key>, Value> implements SortST<Key, Valu
         Node t = floor(x.right, key);
         if (t == null) return x;
         else return t;
+    }
+
+    @Override
+    public Key ceiling(Key key) {
+        return null;
     }
 
     public Key select(int k) {
@@ -128,9 +144,58 @@ public class BST<Key extends Comparable<Key>, Value> implements SortST<Key, Valu
 
     private Node deleteMin(Node x) {
         if (x.left == null) return x.right;
-        x.left = deleteMin(x);
+        x.left = deleteMin(x.left);
         x.N = size(x.left) + size(x.right) + 1;
         return x;
+    }
+
+    @Override
+    public void deleteMax() {
+        deleteMax(root);
+    }
+
+    public Node deleteMax(Node x) {
+        if (x.right == null) return x.left;
+        x.right = deleteMax(x.right);
+        x.N = size(x.left) + size(x.right) + 1;
+        return x;
+    }
+
+    @Override
+    public int size(Key lo, Key hi) {
+        return root.N;
+    }
+
+    @Override
+    public Iterable<Key> keys(Key lo, Key hi) {
+        Queue<Key> queue = new Queue<>();
+        keys(root, queue, lo, hi);
+        return queue;
+    }
+
+    private void keys(Node x, Queue<Key> queue, Key lo, Key hi) {
+        if (x == null) return;
+        int cmplo = lo.compareTo(x.key);
+        int cmphi = hi.compareTo(x.key);
+        if (cmplo < 0) keys(x.left, queue, lo, hi);
+        if (cmplo <= 0 && cmphi >= 0) queue.enqueue(x.key);
+        if (cmphi > 0) keys(x.right, queue, lo, hi);
+    }
+
+    @Override
+    public Iterable<Key> keys() {
+        return keys(min(), max());
+    }
+
+    public void print() {
+        print(root);
+    }
+
+    private void print(Node node) {
+        if (node == null) return;
+        print(node.left);
+        System.out.println(node.key + "\t");
+        print(node.right);
     }
 
     public void delete(Key key) {
@@ -167,7 +232,31 @@ public class BST<Key extends Comparable<Key>, Value> implements SortST<Key, Valu
         return x;
     }
 
+    @Override
+    public boolean contains(Key key) {
+        return false;
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return root == null;
+    }
+
+
+
     public static void main(String[] args) {
         System.out.println("hello");
+        BST<Integer, String> bst = new BST<>();
+        bst.put(4, "d");
+        bst.put(2, "b");
+        bst.put(1, "a");
+        bst.put(3, "c");
+        bst.put(5, "e");
+        bst.print();
+        System.out.println("-------------");
+//        System.out.println(bst.max());
+        for (Integer key : bst.keys()) {
+            System.out.println(key);
+        }
     }
 }

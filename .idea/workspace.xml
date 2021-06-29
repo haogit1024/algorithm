@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf63c5d8-33fc-422a-a0a7-68a1ae00283b" name="Default" comment="符号表习题3.1.3">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="cf63c5d8-33fc-422a-a0a7-68a1ae00283b" name="Default" comment="bst基本操作">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/algorithm/com/czh/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/algorithm/com/czh/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/czh/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/czh/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/czh/search/BST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/czh/search/BST.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/czh/search/BinarySearchST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/czh/search/BinarySearchST.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/czh/search/api/SortST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/czh/search/api/SortST.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/czh/search/exercises/OrderedSequentialSearchST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/czh/search/exercises/OrderedSequentialSearchST.java" afterDir="false" />
@@ -449,7 +447,7 @@
       <workItem from="1622077908016" duration="589000" />
       <workItem from="1622079505392" duration="267000" />
       <workItem from="1623672770381" duration="2234000" />
-      <workItem from="1624929463408" duration="3231000" />
+      <workItem from="1624929463408" duration="5461000" />
     </task>
     <task id="LOCAL-00001" summary="myAtoi（未完成）">
       <created>1614852738911</created>
@@ -493,7 +491,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621344810525</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="bst基本操作">
+      <created>1624932749962</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1624932749962</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -504,7 +509,8 @@
     <MESSAGE value="sort st" />
     <MESSAGE value="BinarySearchST" />
     <MESSAGE value="符号表习题3.1.3" />
-    <option name="LAST_COMMIT_MESSAGE" value="符号表习题3.1.3" />
+    <MESSAGE value="bst基本操作" />
+    <option name="LAST_COMMIT_MESSAGE" value="bst基本操作" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

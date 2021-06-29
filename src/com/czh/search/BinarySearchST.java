@@ -37,7 +37,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> implements SortS
     }
 
     @Override
-    public Key mini() {
+    public Key min() {
         return keys[0];
     }
 
@@ -92,7 +92,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> implements SortS
 
     @Override
     public void deleteMin() {
-        delete(mini());
+        delete(min());
     }
 
     @Override
